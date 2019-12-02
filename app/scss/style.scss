@@ -25,10 +25,16 @@
     color: #fff;
     font-size: 12px;
 }
+.header__box {
+    display: flex;
+    align-items: center;
+}
 .header__btn-login {
     background-color: $green;
+    margin-left: 20px;
 }
-.header__btn-register {
+.header__btn-register,
+.header__btn-logout {
     background-color: $red;
     margin-left: 7px;
 }
@@ -50,6 +56,157 @@
     a {
         color: #fff;
     }
+}
+.header__circle {
+    &.active {
+        display: block;
+    }
+    display: none;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #e5e2e2;
+    position: relative;
+    span {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 18px;
+        right: -7px;
+        top: -7px;
+        font-size: 11px;
+        color: #fff;
+    }
+    &::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color: #a0a0a0;
+        font-size: 16px;
+    }
+}
+.notification {
+   span {
+    background-color: #fcb322;
+   } 
+}
+.message {
+   span {
+    background-color: #ef6c00;
+   } 
+}
+.basket {
+  span {
+    background-color: #95c85a;
+  }  
+}
+.user {
+    padding-right: 20px;
+    margin-right: 25px;
+    margin-left: 20px;
+    position: relative;
+    &::before {
+        content: '\f107';
+        position: absolute;
+        font-family: 'icomoon';
+        right: 0;
+        top: 0;
+        font-size: 16px;
+        color: #707070;
+    }
+    &__inner {
+        display: flex;
+        align-items: center;
+    }    
+    &__info {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    &__images {
+        margin-right: 15px;
+        width: 34px;
+        height: 34px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+    &__name {
+        @include f500;
+        color: #222;
+    }
+    &__money {
+        color: $green;
+        @include f700;
+    }
+}
+.header__btn-login--off {
+    display: none;
+}
+.header__btn-logout {
+    display: none;
+    &.header__btn-login--on {
+        display: block;
+    }
+}
+.user__box,
+.basket__box {
+    position: relative;
+    height: 90px;
+    margin-top: 42px;
+    &:hover {
+        .user__menu {
+            height: auto;
+            border-width: 1px;
+            padding: 20px;
+            overflow: auto;
+        }
+    }
+}
+.user__menu {
+    border: 0px solid rgb(204, 204, 204);
+    background-color: #fff;
+    position: absolute;
+    padding: 0 20px;
+    width: 158px;
+    top: 69px;
+    left: 20px;
+    transition: all .3s;
+    height: 0px;
+    overflow: hidden;
+    li {
+        margin-bottom: 15px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    a {
+        font-size: 12px;
+        color: #546e7a;
+        width: 100%;
+    }
+}
+.basket__box {
+    margin-top: 57px;
+    margin-left: 15px;
+    border-top: 1px solid #e0e0e0;
+}
+.basket__menu {
+    position: absolute;
+    top: 69px;
+}
+.basket__item {
+    background-color: #fff;
+    padding: 23px;
+    border: 1px solid #e0e0e0;
+    border-top: none;
+    display: flex;
+    align-items: center;
+    width: 269px;
+}
+.basket__images {
+    margin-right: 15px;
 }
 // end header
 
@@ -547,6 +704,7 @@
 }
 // end footer
 
+
 // product-page start
 .product-page__inner {
     display: flex;
@@ -872,7 +1030,5 @@
         }  
     }
 }
-
-
-
 // product-page end
+
