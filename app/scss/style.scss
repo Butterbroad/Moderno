@@ -324,6 +324,111 @@
 }
 // end header
 
+// start modal
+#modal {
+    background-color: $green;
+    max-width: 730px;
+    width: 100%;
+    padding: 90px 0 100px;
+}
+.login__title {
+    text-align: center;
+    text-transform: uppercase;
+    @include f700;
+    font-size: 48px;
+    margin-bottom: 40px;
+    color: #fff;
+}
+.login__wrapper {
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    label {
+        position: relative;
+        display: block;
+        width: 100%;
+        &::before {
+            position: absolute;
+            font-family: 'icomoon';
+            font-size: 14px;
+            color: #fff;
+            left: 18px;
+            top: 9px;
+        }
+    }
+    .login__label-name {
+        &::before {
+            content: "\f007";
+        }
+        
+    }
+    .login__label-pass  {
+        &::before {
+            content: "\f023";
+        }   
+    }
+    input {
+        height: 43px;
+        margin-bottom: 8px;
+        border: none;
+        outline: none;
+        background-color: #76ae36;
+        color: #fff;
+        font-size: 14px;
+        padding-left: 40px;
+        display: block;
+        width: 100%;
+        &::placeholder {
+            color: #fff;
+            font-size: 14px;
+        }
+    }
+    button {
+        margin-top: 19px;
+        padding: 18px 0 16px;
+        width: 140px;
+        background-color: #fff;
+        color: #000;
+        font-size: 14px;
+        @include f700;
+        text-align: center;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0px 2px 2px 0px rgba(118, 174, 54, 0.75);
+        margin-right: 10px;
+    }
+}
+.lost-pass {
+    display: block;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 18px;
+}
+.create-acc {
+    text-align: center;
+    padding: 12px 0 14px 28px;
+    width: 245px;
+    background-color: #76ae36;
+    color: 18px;
+    font-size: 18px;
+    color: #fff;
+    position: relative;
+    &::before {
+        content: '\f044';
+        font-family: 'icomoon';
+        position: absolute;
+        top: 13px;
+        left: 35px;
+        font-size: 18px;
+    }
+}
+.fancybox-button svg path {
+    fill: #fff;
+}
+// end modal
+
+
 // start search
 .search {
     background-repeat: no-repeat;
