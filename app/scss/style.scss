@@ -403,7 +403,7 @@
     display: block;
     margin-top: 20px;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
 }
 .create-acc {
     text-align: center;
@@ -1572,7 +1572,87 @@
 }
 // product-one end
 
-  
+// page-404 start
+.page-404__wrapper,
+.about__wrapper {
+    border: 1px solid #dcdcdc;
+    background-color: #fff;
+    margin-bottom: 150px;
+}
+.page-404__head,
+.about__head {
+    @include f500;
+    font-size: 24px;
+    color: #444;
+    padding: 23px 27px;
+    border-bottom: 1px solid #dcdcdc;
+}
+.page-404__inner {
+    text-align: center;
+    background-color: $green;
+}
+.page-404__404 {
+    font-size: 300px;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    font-weight: 800;
+    padding-top: 60px;
+    margin-bottom: 50px;
+    line-height: 1;
+    position: relative;
+    &::after {
+        position: absolute;
+        content: '';
+        background-image: url(../img/page-404.png);
+        width: 150px;
+        height: 292px;
+        margin-left: 20px;
+    }
+}
+.page-404__title {
+    font-size: 30px;
+    @include f300;
+    margin-bottom: 30px;
+    color: #fff;
+}
+.page-404__text {
+    font-size: 18px;
+    max-width: 501px;
+    margin: 0 auto;
+    color: #fff;
+    margin-bottom: 50px;
+}
+.page-404__link {
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    padding: 20px 30px 16px;
+    border-radius: 4px;
+    margin-bottom: 100px;
+}
+// page-404 end
+
+// page-about start
+.about__inner {
+    padding-left: 50px;
+}
+.about__box {
+    h3 {
+        @include f700;
+        font-size: 20px;
+        color: #444;
+        margin-top: 40px;
+        margin-bottom: 15px;
+    }
+    p {
+        font-size: 15px;
+        margin-bottom: 40px;
+    }
+}
+// page-about start
+
+
 
 
 
