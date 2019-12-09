@@ -499,6 +499,11 @@
     padding: 110px 0 110px;
     background-color: $grey;
 }
+.products__wrapper,
+.product-slider__wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+}
 .products__inner-btn {
     text-align: center;
     margin-bottom: 60px;
@@ -520,8 +525,13 @@
 }
 .products__inner-box {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    margin-left: -30px;
     flex-wrap: wrap;
+}
+.products .product__item {
+    flex-basis: calc(25% - 30px);
+    margin-left: 30px;
 }
 .product__item {
     max-width: 442px;
@@ -1122,9 +1132,10 @@
 }
 .product-page__content {
     .product__item {
-        max-width: 270px;
+        flex-basis: calc(33.3333% - 30px);
         background-color: #fff;
         transition: all .5s;
+        margin-left: 30px;
     }
     .product__item-img {
         min-height: 180px;
@@ -1149,9 +1160,10 @@
 }
 .product-page__items {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-bottom: 30px;
     flex-wrap: wrap;
+    margin-left: -30px;
 }
 .pagination-list {
     li {
@@ -1214,6 +1226,7 @@
 .product__item {
     &.list {
         max-width: 100%;
+        flex-basis: 100%;
         .product__item-img {
             width: 240px;
             float: left;
@@ -1269,7 +1282,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 16px 0;
+    padding: 16px;
 }
 .product-one__images {
     background-repeat: no-repeat;
@@ -1444,6 +1457,31 @@
     display: flex;
     justify-content: space-between;
     padding: 30px 0;
+    .jq-selectbox__select {
+        height: 25px;
+        padding: 0 8px;
+        border: 1px solid #d3d3d3;
+        border-bottom-color: none;
+        border-radius: 0;
+        background: none;
+        box-shadow: none;
+        color: #70838d;
+        text-shadow: none;
+        width: 82px;
+    }
+    .jq-selectbox__select-text {
+        font-size: 13px;
+        line-height: 25px;
+    }
+    .jq-selectbox__trigger {
+        position: absolute;
+        top: -4px;
+        right: -5px;
+        width: 0;
+        height: 100%;
+        border-left: none;
+        border-color: $green;
+    }
 }
 .price__product {
     @include f500;
@@ -1639,6 +1677,7 @@
 // page-about start
 .about__inner {
     padding-left: 50px;
+    padding-right: 50px;
 }
 .about__box {
     h3 {
@@ -1831,6 +1870,30 @@
     margin-bottom: 21px;
     display: flex;
     align-items: center;
+    .jq-selectbox {
+        max-width: 100%;
+        width: 100%;
+    }
+    .jq-selectbox__select {
+        height: 40px;
+        padding: 0 18px;
+        border: 1px solid #d7d7d7;
+        border-bottom-color: none;
+        border-radius: 0px;
+        background: #f9f9f9;
+        box-shadow: none;
+        color: #707070;
+        text-shadow: none;
+        line-height: 40px;
+    }
+    .jq-selectbox__trigger {
+        position: absolute;
+        top: 4px;
+        right: 10px;
+        width: 34px;
+        height: 100%;
+        border-left: none;
+    }
     label {
         color: #444;
         font-size: 15px;
