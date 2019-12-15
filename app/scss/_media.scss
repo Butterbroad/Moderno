@@ -488,7 +488,6 @@
         width: 100%;  
     }
     .header {
-        overflow: hidden;
         .container {
             padding: 0;
         }
@@ -524,8 +523,12 @@
         right: 90px;
         }
     }
+    .menu {
+        height: 0;      
+    }
     .user__menu {
-        top: 52px;
+        top: 59px;
+        left: 0;
     }
     .circle__menu {
         top: 50px;
@@ -543,7 +546,6 @@
     }
     .header__top-inner {
         height: 70px;
-        overflow: hidden;
         position: relative;
     }
     .menu__list {
@@ -571,6 +573,10 @@
     }
     .user__box {
         margin-top: 56px;
+    }
+    .user__menu {
+        top: 52px;
+        left: 0; 
     }
     .product-one__images {
         height: 250px;    
